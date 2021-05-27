@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+
+    android:background="@color/white"
+    android:id="@+id/feed_recycler">
+
+
+    <ImageView
+        android:id="@+id/user_photo"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+        android:src="@drawable/ic_person"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rio"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/user_photo"
+        app:layout_constraintTop_toTopOf="@id/user_photo"
+        app:layout_constraintBottom_toBottomOf="@id/user_photo"/>
+
+
+
+    <ImageView
+        android:id="@+id/gambarpost"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/user_photo"
+        app:layout_constraintBottom_toTopOf="@id/gambarlike"
+        />
+
+    <ImageView
+        android:id="@+id/gambarlike"
+        app:layout_constraintTop_toBottomOf="@id/gambarpost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/jumlahlike"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:padding="10dp"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+        android:src="@drawable/ic_like_border"/>
+
+    <ImageView
+        android:id="@+id/gambarlike1"
+        app:layout_constraintTop_toBottomOf="@id/gambarpost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/jumlahlike"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:visibility="invisible"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+        android:src="@drawable/ic_like"/>
+
+    <ImageView
+        android:id="@+id/gambarkomentar"
+        app:layout_constraintStart_toEndOf="@id/gambarlike"
+        app:layout_constraintTop_toTopOf="@id/gambarlike"
+        app:layout_constraintBottom_toBottomOf="@id/gambarlike"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:padding="10dp"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+        android:src="@drawable/ic_comment_border"/>
+
+    <ImageView
+        android:id="@+id/gambarshare"
+        app:layout_constraintStart_toEndOf="@id/gambarkomentar"
+        app:layout_constraintTop_toTopOf="@id/gambarlike"
+        app:layout_constraintBottom_toBottomOf="@id/gambarlike"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:padding="10dp"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+        android:src="@drawable/ic_share"/>
+
+    <TextView
+        android:id="@+id/jumlahlike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/gambarlike"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/caption"/>
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/jumlahlike"
+        app:layout_constraintStart_toStartOf="@id/jumlahlike"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Rio Caption ini untuk post diatas. caption ini sebenarnya sangat panjang.............."/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
